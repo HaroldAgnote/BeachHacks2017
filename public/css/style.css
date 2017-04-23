@@ -1,0 +1,82 @@
+body
+{
+    font-family: 'Rationale', sans-serif;
+    text-align: center;
+    background-color: #C8C8C8;
+}
+
+*
+{
+    border : 1px dashed red;
+}
+
+#title
+{
+
+}
+
+#content
+{
+    padding-bottom: 10em;
+}
+
+input[type=text]
+{
+    background-color: white;
+    background-image: url('/images/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px;
+    padding-left: 70px;
+    width : 50%;
+    border-radius: 5px;
+}
+
+#searchButton
+{
+    font-family: 'Rationale', sans-serif;
+    background-color: snow;
+    border-color: snow;
+    font-size: 100%;
+    border-style: solid;
+    border-width: 12px 20px;
+    border-radius: 5px;
+}
+
+.videos
+{
+    display : flex;
+    flex-direction: column;
+}
+.video
+{
+    padding: inherit;
+    display : inline-flex;
+    flex-direction: row;
+    padding-bottom: 3em;
+}
+
+.thumbnail
+{
+    align-self: flex-start;
+}
+
+.thumbnail:hover
+{
+    opacity: 0.2;
+}
+
+.viewStats
+{
+    opacity: 0;
+}
+
+.thumbnail:hover .viewStats
+{
+    opacity: 1.0;
+}
+
+.videoTitle
+{
+    flex: 1 0 0;
+}
