@@ -15,29 +15,35 @@
     <%var i = 0%>
 
     <%Object.keys(test.items).forEach(function(item) {%>
+
     <%var imgSrc = test.items[item].snippet.thumbnails.medium.url%>
 
-    <div class = "video" id = "video" + "<%-i%>" >
+    <div class = "video" id = "video<%-i%>" >
         <div class = "thumbnail">
             <img src = "<%-imgSrc%>">
-            <div class="viewStats">
-                Views: 9001
-            </div>
         </div>
         <div class = "videoDesc">
             <div class = "videoTitle">
-                <%item.title%>
+                <h3><%-test.items[item].snippet.title%></h3>
             </div>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum."
+            <%-test.items[item].snippet.description%>
         </div>
     </div>
     <%i++%>
     <%})%>
 </div>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<script>
+    //TODO: Do something with search query
+    $("#searchButton").click(function ()
+    {
+        var query = $("#search").val();
+        console.log(query);
+    });
+</script>
 
 </body>
 </html>
