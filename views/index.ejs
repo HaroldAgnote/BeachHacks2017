@@ -18,7 +18,13 @@
 
     <%var imgSrc = test.items[item].snippet.thumbnails.medium.url%>
 
-    <div class = "video" id = "video<%-i%>" >
+    <div class = "video" id = "video<%-i%>"
+    <%if (i > 9){%>
+        style="display: none;"
+    <%  }%>
+    >
+
+
         <div class = "thumbnail">
             <img src = "<%-imgSrc%>">
         </div>
@@ -29,6 +35,8 @@
             <%-test.items[item].snippet.description%>
         </div>
     </div>
+
+
     <%i++%>
     <%})%>
 </div>
